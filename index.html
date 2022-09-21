@@ -11,14 +11,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-dark">
+  <section id="banner-section">
+    <div class="banner">
+      <h1 class="text-white text-center fw-bolder heading"><span class="text-warning">Famous players</span> of all time</h1>
+      <p>One of the areas often looked at when judging the importance of a player is his market value.  Today some of the most valuable footballers in the world can be found in the top European leagues like the English Premier League, La Liga, Série A and the German Bundesliga.</p>
+    </div>
+  </section>
   <div class="container bg-dark">
-    <section id="banner-section">
-      <div class="banner">
-        <h1 class="text-white text-center fw-bolder heading"><span class="text-warning">Famous players</span> of all time</h1>
-        <p>One of the areas often looked at when judging the importance of a player is his market value.  Today some of the most valuable footballers in the world can be found in the top European leagues like the English Premier League, La Liga, Série A and the German Bundesliga.</p>
-      </div>
-    </section>
     <main>
       <div class="row mt-5">
         <div class="col-md-8">
@@ -122,10 +122,10 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <h1 class="text-center text-white">Selected-V</h1>
+        <div class="col-md-4 bg-gradient">
+          <h1 class="text-center text-white ">Selected-V</h1>
           <div class="w-100">
-            <ol id="player-list" class="bg-dark text-white"></ol>
+            <ol id="player-list" class="bg-warning text-white"></ol>
           </div>
           <div class="w-100 my-5">
             <h1 class="text-center text-white mb-3">Budget</h1>
@@ -152,12 +152,16 @@
             <button onclick="calculateTotal()" class="btn btn-primary w-100 fs-4">Calculate Total</button>
             <h5 class="my-3 text-white fs-5">Total <span id="subtotal">0</span></h5>
           </div>
-
         </div>
       </div>
     </main>
   </div>
-
+  <hr class="text-white">
+  <footer class="my-3">
+    <div class="bg-dark text-white p-5 text-center ">
+      <p class="fs-4 fw-bolder">Copyright @ 2022 All Rights Reserved</p>
+    </div>
+</footer>
   <script src="js/players.js"></script>
 </body>
 
