@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
+    <div class="container">
+      <section>
         <header>
             <h1 class="text-center">Famous players fo all time</h1>
         </header>
@@ -24,7 +25,7 @@
                         <div class="card-body">
                           <h3 class="card-title">Cristiano Ronaldo</h3>
                           <p class="card-text">50 goals : 30 assist</p>
-                          <button type="button" class="btn btn-primary w-75">SELECT</button>
+                          <button type="button" class="btn btn-primary w-75" onclick="addToPlayer('Cristiano Ronaldo', this)">SELECT</button>
                         </div>
                       </div>
                     </div>
@@ -34,7 +35,7 @@
                         <div class="card-body">
                           <h3 class="card-title">David Beckham</h3>
                           <p class="card-text">40 goals : 30 assist</p>
-                          <button type="button" class="btn btn-primary w-75">SELECT</button>
+                          <button type="button" class="btn btn-primary w-75" onclick="addToPlayer('David Beckham', this)">SELECT</button>
                         </div>
                       </div>
                     </div>
@@ -44,7 +45,7 @@
                         <div class="card-body">
                           <h3 class="card-title">Iker Casilas</h3>
                           <p class="card-text">3 goals : 3 assist</p>
-                          <button type="button" class="btn btn-primary w-75">SELECT</button>
+                          <button type="button" class="btn btn-primary w-75" onclick="addToPlayer('Iker Casilas', this)">SELECT</button>
                         </div>
                       </div>
                     </div>
@@ -54,7 +55,7 @@
                         <div class="card-body">
                           <h3 class="card-title">Ricardo Kaka</h3>
                           <p class="card-text">40 goals : 30 assist</p>
-                          <button type="button" class="btn btn-primary w-75">SELECT</button>
+                          <button type="button" class="btn btn-primary w-75" onclick="addToPlayer('Ricardo Kaka', this)">SELECT</button>
                         </div>
                       </div>
                     </div>
@@ -64,7 +65,7 @@
                         <div class="card-body">
                           <h3 class="card-title">Karim Benzema</h3>
                           <p class="card-text">43 goals : 30 assist</p>
-                          <button type="button" class="btn btn-primary w-75">SELECT</button>
+                          <button type="button" class="btn btn-primary w-75" onclick="addToPlayer('Karim Benzema', this)">SELECT</button>
                         </div>
                       </div>
                     </div>
@@ -74,7 +75,7 @@
                         <div class="card-body">
                           <h3 class="card-title">Sergio Ramos</h3>
                           <p class="card-text">12 goals : 20 assist</p>
-                          <button type="button" class="btn btn-primary w-75">SELECT</button>
+                          <button type="button" class="btn btn-primary w-75" onclick="addToPlayer('Sergio Ramos', this)">SELECT</button>
                         </div>
                       </div>
                     </div>
@@ -84,7 +85,7 @@
                         <div class="card-body">
                           <h3 class="card-title">Raul</h3>
                           <p class="card-text">50 goals : 34 assist</p>
-                          <button type="button" class="btn btn-primary w-75">SELECT</button>
+                          <button type="button" class="btn btn-primary w-75" onclick="addToPlayer('Raul', this)">SELECT</button>
                         </div>
                       </div>
                     </div>
@@ -92,9 +93,9 @@
                       <div class="card text-center">
                         <img src="./images/marchelo.webp" class="card-img-top w-100 img-style" alt="...">
                         <div class="card-body">
-                          <h3 class="card-title">Marchelo</h3>
+                          <h3 class="card-title">Marchello</h3>
                           <p class="card-text">10 goals : 14 assist</p>
-                          <button type="button" class="btn btn-primary w-75">SELECT</button>
+                          <button type="button" class="btn btn-primary w-75" onclick="addToPlayer('Marchello', this)">SELECT</button>
                         </div>
                       </div>
                     </div>
@@ -104,15 +105,43 @@
                         <div class="card-body">
                           <h3 class="card-title">Michael Owen</h3>
                           <p class="card-text">30 goals : 10 assist</p>
-                          <button type="button" class="btn btn-primary w-75">SELECT</button>
+                          <button type="button" class="btn btn-primary w-75" onclick="addToPlayer('Michael Owen', this)">SELECT</button>
                         </div>
                       </div>
                     </div>
                   </div>
             </div>
             <div class="col-md-4">
+              <h1 class="text-center">Selected-V</h1>
+              <div class="w-100">
+                <ol id="player-list"></ol>
+              </div>
+              <div class="w-100 my-5">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="inputGroup-sizing-default">Per Player</span>
+                  <input id="per-player" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <button onclick="calculate()" class="btn btn-primary w-100">Calculate</button>
+                <h5 class="my-3">Player Expenses <span id="total">0</span></h5>
+              </div>
+              <div class="w-100 my-5">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="inputGroup-sizing-default">Manager</span>
+                  <input id="manager-charge" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="inputGroup-sizing-default">Coach</span>
+                  <input id="coach-charge" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <button onclick="calculateTotal()" class="btn btn-primary w-100">Calculate Total</button>
+                <h5 class="my-3">Total <span id="subtotal">0</span></h5>
+              </div>
+              
             </div>
         </div>
-    </main>
+    </main> 
+    </div>
+
+    <script src="js/players.js"></script>
 </body>
 </html>
